@@ -14,6 +14,9 @@
     <div >
         <img id = "imagem" src="https://apexensino.com.br/wp-content/uploads/2017/11/html-css-javascript.jpg" alt="Imagem JS">
     </div>
+
+    <button id = "botao">Click me </button>
+    <button onclick="trocaImagem"> Outro botão</button>
     <script>
         console.log("Hello World");
         //document.write("<h3> Teste </h3>")
@@ -43,7 +46,24 @@
 
         //Manipulação de atributos
         const imagem = document.getElementById("imagem");
-        console.log(imagem);
+        console.log(imagem.getAttribute("src"));
+        imagem.setAttribute("src", "https://apexensino.com.br/wp-content/uploads/2017/11/html-css-javascript.jpg");
+        // imagem.removeAttribute("src");
+
+        //Manipulação de CSS
+        imagem.style.border = "1px solid black";
+        imagem.style.borderRadius = "10px";
+        
+        //Eventos
+        const button = document.getElementById("botao");
+        button.addEventListener("click", function() {
+            console.log("Entrou!");
+            imagem.setAttribute("src", "https://static.vecteezy.com/ti/fotos-gratis/p2/3334913-desktop-source-code-and-wallpaper-by-coding-and-programming-gratis-foto.jpg");
+        })
+        
+        function trocaImagem(){
+            imagem.setAttribute("src", "https://apexensino.com.br/wp-content/uploads/2017/11/html-css-javascript.jpg");
+        }
         
     </script>
 </body>
