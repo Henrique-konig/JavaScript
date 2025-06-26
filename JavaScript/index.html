@@ -6,9 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1 id="h1">Hello World</h1>
+    <h2 id="h2">JS Digita: </h2>
+    <h3 class = "h3">Teste 1</h3>
+    <h3 class = "h3">Teste 2</h3>
     <script>
-        console.log("Hello World")
+        console.log("Hello World");
+        //document.write("<h3> Teste </h3>")
+
+        //Buscar o elemento por id
+        const h2 = document.getElementById("h2");
+        console.log(h2);
+
+        //Uso com seletores
+        const h1 = document.querySelector("#h1");
+        console.log(h1);
+        const h3 = document.querySelectorAll(".h3");
+        console.log(h3);
+
+        //Buscar por nome da classe
+        const classH3 = document.getElementsByClassName("h3");
+        console.log(classH3);
+
+        //Manipulação de Elementos
+        //Texto
+        h2.textContent = "Novo Texto";
     </script>
 </body>
 </html>
