@@ -10,6 +10,10 @@
     <h2 id="h2">JS Digita: </h2>
     <h3 class = "h3">Teste 1</h3>
     <h3 class = "h3">Teste 2</h3>
+    <div id = "bloco"></div>
+    <div >
+        <img id = "imagem" src="https://apexensino.com.br/wp-content/uploads/2017/11/html-css-javascript.jpg" alt="Imagem JS">
+    </div>
     <script>
         console.log("Hello World");
         //document.write("<h3> Teste </h3>")
@@ -31,6 +35,16 @@
         //Manipulação de Elementos
         //Texto
         h2.textContent = "Novo Texto";
+
+        //HTML - Tags 
+        const div = document.getElementById("bloco");
+        div.innerHTML = "<h1> Titulo do Bloco </h1>";
+        console.log(div);
+
+        //Manipulação de atributos
+        const imagem = document.getElementById("imagem");
+        console.log(imagem);
+        
     </script>
 </body>
 </html>
